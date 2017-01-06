@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='myFirstApp'>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -17,7 +20,18 @@
   <body>
     Hallo vurld
     Adding some text to test git
-
+    <hr>
+    more text
+    <hr>
+    <h1>This is my first angular app</h1>
+    <div ng-controller='myFirstController'>
+      {{name}}
+      {{sayHello()}}
+      <input type="text" ng-model="name" name="some_name" value="name" ng-keypress="keycodevalue($event)">
+      <hr>
+      total value for "name" {{totalValue(name)}}
+      key value = {{keyCode}}
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
